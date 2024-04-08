@@ -1,3 +1,4 @@
+{{#if loggedIn}}
 <h1>Homepage</h1>
 {{#each posts}}
     <div class="post">
@@ -5,3 +6,4 @@
         <p>Posted by {{this.User.username}} on {{this.createdAt}}</p>
     </div>
 {{/each}}
+{{/if}}
