@@ -44,6 +44,19 @@ router.post('/login', async (req, res) => {
     }
 });
 
+// get all users, to see ids for seeding
+router.get('/users', async (req, res) => {
+    try {
+        const users = await User.findAll({
+            attributes: ['id', 'username'], 
+        });
+        res.json(users);
+    } catch (err) {
+        console.error('Error fetching users:', err);
+        res.status(500).json({ message: 'Error fetching users' });
+    }
+});
+
 // user logout
 router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {

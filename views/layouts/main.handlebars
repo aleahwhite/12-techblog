@@ -2,19 +2,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Blog</title>
+    <title> 👩🏽‍💻 Tech Blog</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="/">Home</a></li>
+                
                 {{#if loggedIn}}
-                    <li><a href="/dashboard">Dashboard</a></li>
-                    <li><a href="#" id="logout">Logout</a></li>
+                    <li><a href="/"> 🏠 Home</a></li>
+                    <li><a href="/dashboard"> 📝 Dashboard</a></li> 
+                    <li><a href="/logout" id="logout"> 👋 Logout</a></li>
                 {{else}}
-                    <li><a href="/login">Login</a></li>
+                    <li><a href="/login"> 👤 Login</a></li>
                 {{/if}}
             </ul>
         </nav>
